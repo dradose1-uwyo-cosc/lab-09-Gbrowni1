@@ -1,18 +1,14 @@
-# Your Name Here
+# Grant Browning
 # UWYO COSC 1010
-# Submission Date
+# 11/15/24
 # Lab XX
-# Lab Section:
+# Lab Section: Austin
 # Sources, people worked with, help given to:
-# Your
-# Comments
-# Here
 
 # Classes
 # For this assignment, you will be creating two classes:
 # One for Pizza
 # One for a Pizzeria
-
 
 # You will be creating a Pizza class. It should have the following attributes:
 # - Size
@@ -103,3 +99,62 @@ Your total price is $12.9
 
 Would you like to place an order? exit to exit
 """
+
+class Pizza:
+    def __init__(self, size, sauce, toppings=None):
+        """Generates pizza from user input size, sauce, and toppings"""
+        if toppings is None:
+                toppings = ["Cheese"]
+        
+        if size < 10:
+            size = 10
+        
+        if sauce=="":
+            sauce = "red"
+
+        self.size = size
+        self.sauce = sauce
+        self.toppings = toppings
+        print({size}, {sauce}, {toppings})
+
+        return size, sauce, toppings
+
+    def add_toppings(self, toppings):
+     """Add toppings to user generated pizza"""
+    
+    price_per_inch = 0.60
+
+
+    def getprice():
+        "Calculates the price of the chosen pizza"
+        Price = (Pizza.getSize() * price_per_inch()) + Pizza.getAmountOfToppings() * price_per_topping
+    
+
+class Pizzeria:
+    """"""
+    def orderlist():
+        order = 0
+        
+        if order_placed:
+            order += 1 
+        return order
+
+def getprice():
+    price = (Pizza.getSize() * price_per_inch) + pizza.getAmountOfToppings() * price_per_topping
+    return price
+
+Order = input("Would you like to place an order? 'Exit' to exit.")
+Size = input("What size pizza would you like? Minimum size is 10 inches")
+Sauce = input("What sauce would you like on your pizza?")
+Toppings = input("What toppings would you like? Seperate each topping with a comma, please.")
+Toppings_list = []
+Confirm = input("You would like a {size} pizza with {sauce} sauce topped with {topping_list}, is that right?")
+
+if Confirm == "no":
+    print("Okay, lets start again.")
+    placeOrder()
+else:
+    getreceipt()
+
+placeOrder()
+getprice()
