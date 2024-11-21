@@ -122,27 +122,35 @@ class Pizza:
     def add_toppings(self, toppings):
      """Add toppings to user generated pizza"""
     
-    price_per_inch = 0.60
+   
 
 
     def getprice():
         "Calculates the price of the chosen pizza"
         Price = (Pizza.getSize() * price_per_inch()) + Pizza.getAmountOfToppings() * price_per_topping
-    
+
+def order_placed():
+    if  
 
 class Pizzeria:
     """"""
     def orderlist():
         order = 0
         
-        if order_placed:
+        if order_placed():
             order += 1 
         return order
 
+price_per_inch = 0.60
 def getprice():
     price = (Pizza.getSize() * price_per_inch) + pizza.getAmountOfToppings() * price_per_topping
     return price
 
+def getreceipt():
+    print(f"Okay, your total is {getprice}")
+
+def pizza_input():
+    """user inputs of order, size, sause, toppings, and confirmation. Runs other functions."""
 Order = input("Would you like to place an order? 'Exit' to exit.")
 Size = input("What size pizza would you like? Minimum size is 10 inches")
 Sauce = input("What sauce would you like on your pizza?")
@@ -150,6 +158,7 @@ Toppings = input("What toppings would you like? Seperate each topping with a com
 Toppings_list = []
 Confirm = input("You would like a {size} pizza with {sauce} sauce topped with {topping_list}, is that right?")
 
+pizza_input()
 if Confirm == "no":
     print("Okay, lets start again.")
     placeOrder()
